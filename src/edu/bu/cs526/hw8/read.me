@@ -1,0 +1,31 @@
+CS526 HW8 MEASURING INSERT AND SEARCH TIME 
+
+Zhuo Zhang
+zzhang90@bu.edu
+
+# observation:
+
+insertion time: 
+
+hashmap is taking a lot longer than arraylist and linkedlist, while linkedlist is slightly slower than arraylist at insertion, it's not off by too much. 
+
+this is expected since all hashmap, linkedlist and arraylist have O(n) insertion time and little overhead while hashmap needs to call the hash function each time.
+
+searching time:
+
+hashmap is the winner here by a really large margin. both arraylist and linked list are really slow compared to hashmap and they arraylist is faster than linked list but not by too much.  
+
+this is also expected since hashmap has constant search time while both arraylist and linkedlist have linear search time. with a searching task this size it's very obvious how much slower they are.
+
+# conclusion
+
+for tasks that require more insertion, or constant logging, hashmap is not the most ideal datastructure since arraylist and linkedlist are faster and take less space. but its advantage is when we need searching and constant accessing to the content. hashmap can provide very fast access time. arraylist and linkedlist are not too different in performance while both provide the flexibility of a dynamic list. 
+
+# discussion
+
+arraylist seems to be the most commonly used list/array and it has its reason. it seems to be the most efficient for most cases where we just need a list of a dynamic size to hold data. searching is not very fast but for tasks where we only have to iterate through the elements it's not a bad choice.
+
+hashmap has its advantage in making sure the search time is reasonable. since it uses hash functions for indices we are saving time if we need to constantly check if something is in the map already. 
+
+linkedlist is not the fastest and does not provide too much more than arraylist when it comes to speed and flexibility but does have its own advantages.
+

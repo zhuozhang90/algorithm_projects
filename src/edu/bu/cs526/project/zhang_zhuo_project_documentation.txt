@@ -1,0 +1,84 @@
+
+# pseudocode
+
+* Graph object
+
+uses HashMap to represent all nodes and the direct distances, int[][] matrix as edges
+
+handles returing adjacent nodes, distance between two nodes, getting edge lengths, as well as getting direct distances between nodes
+
+* algorithm one
+
+input: takes a graph input, direct distance list and a starting node
+output: all visited nodes, shortest path nodes, and length of path
+
+reads graph input and direct distance files into Graph object
+new ArrayList visits to keep track of all nodes visited
+nextNode and currNode both set to startNode from user input
+
+while nextNode is not "Z"
+get next node that has smallest dd
+unless the currNode is already visited, then get the node with smallest dd that's not already visited
+each time visits a node add it visits 
+
+add end "Z" to the list
+
+loop through all visited nodes, add each node
+if the current node is in the rest of the nodes then skip to the one after the next occurence of the node to get rid of loops
+add nodes without loops to arraylist path
+
+go through path and get each edge, add all lengths of edge together to total pathLength
+
+print all visited nodes, path and pathLength
+
+* algorithm two
+
+(very similar to path one in this implementation except for the distance)
+
+input: takes a graph input, direct distance list and a starting node
+output: all visited nodes, shortest path nodes, and length of path
+
+reads graph input and direct distance files into Graph object
+new ArrayList visits to keep track of all nodes visited
+nextNode and currNode both set to startNode from user input
+
+while nextNode is not "Z"
+get next node that has smallest distance, which is (dd + edge from current node)
+unless the currNode is already visited, then get the node with smallest distance that's not already visited
+each time visits a node add it visits 
+
+add end "Z" to the list
+
+loop through all visited nodes, add each node
+if the current node is in the rest of the nodes then skip to the one after the next occurence of the node to get rid of loops
+add nodes without loops to arraylist path
+
+go through path and get each edge, add all lengths of edge together to total pathLength
+
+print all visited nodes, path and pathLength
+
+# data structures
+
+* lists
+
+lists and matrices are used when storing static data. the graph matrix is stored in an int[][] matrix since we don't need to manipulate the content. edges are also stored inside an int[][] matrix with nodes represented as ints
+
+* arraylist
+
+arraylists are what's used when a list needs to have a dynamic size. visited nodes and final paths are stored inside arraylists
+
+* hashmap
+
+hashmaps are stored when we need key value pairs. they are used inside the Graph object. both node indices and direct distances are represented as HashMap<String, Integer>. node indices HashMap helps with getting distances without having to use nested HashMaps
+
+
+
+
+
+
+
+
+
+
+
+
